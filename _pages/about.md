@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle:  Assistant Professor, Engineering Physics, Polytechnique Montréal.
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: https://www.polymtl.ca/expertises/sites/expertises2.amigow2020.polymtl.ca/files/quesada-nicolas.jpg
   image_circular: false # crops the image to make it circular
   address: >
     <p>555 your office number</p>
