@@ -1,0 +1,40 @@
+\documentclass[twocolumn,pra]{revtex4}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{natbib,hyperref}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\braket}[1]{\langle #1 \rangle}
+\newcommand{\hc}{\text{H.c.}}
+\newcommand{\cc}{\text{c.c.}}
+\newcommand{\h}{\hat}
+\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\di}[1]{\frac{d}{d #1}}  
+\newcommand{\uu}{\mathcal{U}}
+\newcommand{\inn}{\text{in}}
+\newcommand{\out}{\text{out}}
+\newcommand{\seq}[1]{\begin{subequations}#1\end{subequations}}
+\newcommand{\sseq}[1]{\seq{\eq{#1}}}
+
+
+
+
+\begin{document}
+\title{Erratum for:  Why you should not use the electric field to quantize in nonlinear optics}
+\author{Nicol\'as Quesada}
+
+\maketitle
+Equation (22) of Ref. \cite{quesada2017quantize} reads
+\eq{
+\tilde{H}_{NL} = \frac{2}{3} \int d \mathbf{r} \chi^{(2)} \tilde{\mathbf{E}}^3 = -\frac{2}{3} \int d\mathbf{r} \eta^{(2)} \mathbf{D}^3.
+}
+It should read
+\eq{
+\tilde{H}_{NL} = \frac{2}{3} \epsilon_0 \int d \mathbf{r} \chi^{(2)} \tilde{\mathbf{E}}^3 = -\frac{2}{3} \int d\mathbf{r} \eta^{(2)} \mathbf{D}^3.
+}
+\bibliographystyle{plainnat}
+
+\bibliography{errata}
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[twocolumn,pra]{revtex4}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{natbib,hyperref}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\braket}[1]{\langle #1 \rangle}
+\newcommand{\hc}{\text{H.c.}}
+\newcommand{\cc}{\text{c.c.}}
+\newcommand{\h}{\hat}
+\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\di}[1]{\frac{d}{d #1}}  
+\newcommand{\uu}{\mathcal{U}}
+\newcommand{\inn}{\text{in}}
+\newcommand{\out}{\text{out}}
+\newcommand{\seq}[1]{\begin{subequations}#1\end{subequations}}
+\newcommand{\sseq}[1]{\seq{\eq{#1}}}
+
+
+
+
+\begin{document}
+\title{Erratum for: Gaussian functions are optimal for waveguided nonlinear-quantum-optical processes}
+\author{Nicol\'as Quesada}
+
+\maketitle
+Equation (15) of Ref. \cite{quesada2018gaussian} reads
+\eq{
+\Psi(x,y) = \sqrt{|r-s|} \phi(rx+sy)\phi(x+y).
+}
+It should read
+\eq{
+\Psi(x,y) = \sqrt{|r-s|} \phi(rx+sy)\gamma(x+y).
+}
+\bibliographystyle{plainnat}
+
+\bibliography{errata}
+
+\end{document}
