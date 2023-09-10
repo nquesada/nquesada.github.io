@@ -1,0 +1,54 @@
+\documentclass[twocolumn,pra]{revtex4}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{natbib,hyperref}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\braket}[1]{\langle #1 \rangle}
+\newcommand{\hc}{\text{H.c.}}
+\newcommand{\cc}{\text{c.c.}}
+\newcommand{\h}{\hat}
+\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\di}[1]{\frac{d}{d #1}}  
+\newcommand{\uu}{\mathcal{U}}
+\newcommand{\inn}{\text{in}}
+\newcommand{\out}{\text{out}}
+\newcommand{\seq}[1]{\begin{subequations}#1\end{subequations}}
+\newcommand{\sseq}[1]{\seq{\eq{#1}}}
+
+
+
+
+\begin{document}
+\title{Erratum for: Franck-Condon factors by counting perfect matchings of graphs with loops
+}
+\author{Nicol\'as Quesada}
+
+\maketitle
+Equation (31) of Ref. \cite{quesada2019franck} reads
+\eq{
+\mathcal{\hat W} = \mathcal{\hat U}(\bm{O}_R^T) \mathcal{\hat S}(\log(\bm{l})	\mathcal{\hat U}(\bm{O}_L) \mathcal{\hat D}(\bm{d}/\sqrt{2}),
+}
+It should read
+\eq{
+\mathcal{\hat W} = \mathcal{\hat  D}(\bm{d}/\sqrt{2}) \mathcal{\hat U}(\bm{O}_R^T) \mathcal{\hat S}(\log(\bm{l}))	\mathcal{\hat U}(\bm{O}_L) 	.
+}
+Similarly, the equation before Eq. (47) of Ref. \cite{quesada2019franck} reads
+\eq{
+\braket{\bm{n}_{\text{final}}|\bm{m}_{\text{in}}} = \bra{\bm{n}} \mathcal{\hat U}(\bm{O_L^T}) \mathcal{\hat S}(\log(\bm{l})) \mathcal{U}(\bm{O}_R) \mathcal{\hat D}(\bm{d}/\sqrt{2}) \ket{\bm{m}}.
+}
+It should read
+\eq{
+\braket{\bm{n}_{\text{final}}|\bm{m}_{\text{in}}} = \bra{\bm{n}}  \mathcal{\hat D}(\bm{d}/\sqrt{2})  \mathcal{\hat U}(\bm{O_L^T}) \mathcal{\hat S}(\log(\bm{l})) \mathcal{U}(\bm{O}_R) \ket{\bm{m}}.
+}
+
+
+This also implies that one does not need to take the Hermitian adjoint in the same equation to move the displacement to the left-hand side of the inner product.
+Thus this equation when amended with the correction presented here is already in the form of equation (47) albeit with the indices $\bm{m}$ and $\bm{n}$ switched.
+\bibliographystyle{plainnat}
+
+\bibliography{errata}
+
+\end{document}
