@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - nquesada
+  - polyquantique
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - xanaduai/strawberryfields
+  - xanaduai/thewalrus
