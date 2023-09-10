@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   address: >
     <p>J-4005</p>
-    <p>Pavillion J. Armand Bombardier</p>
+    <p>Pavillion J.-Armand Bombardier</p>
 
 news: false  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
