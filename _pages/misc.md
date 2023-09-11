@@ -12,9 +12,9 @@ nav_order: 5
 * Some useful equations in [Atomic Physics](https://nquesada.github.io/misce/atomic.pdf).
 * [&nabla; in cylindrical and spherical coordinates](https://nquesada.github.io/misce/DelFixed.pdf).
 * The classical version of [a and a<sup>&#8224;</sup>](https://nquesada.github.io/misce/sho.pdf).
-* The [normal ordered form of [(a+a<sup>&#8224;</sup>)<sup>n</sup>](https://nquesada.github.io/misce/normal.pdf).
+* The normal ordered form of [(a+a<sup>&#8224;</sup>)<sup>n</sup>](https://nquesada.github.io/misce/normal.pdf).
 * [An identity](https://nquesada.github.io/misce/erfi.pdf) involving the imaginary error function erfi(x) (with Aaron Goldberg).
-* A collection of [short stories](https://github.com/nquesada/TomasCarrasquilla) by [Tom&aacute;s Carrasquilla](http://en.wikipedia.org/wiki/Tom%C3
+* A collection of [short stories](https://github.com/nquesada/TomasCarrasquilla) by [Tom&aacute;s Carrasquilla](https://en.wikipedia.org/wiki/Tom%C3%A1s_Carrasquilla)
 
 ```python
 # Things to put at the beginning of a jupyter notebook
@@ -28,4 +28,16 @@ np.set_printoptions(linewidth=200)
 #from matplotlib import rcParams
 #rcParams['font.family'] = 'serif'
 #rcParams['font.sans-serif'] = ['Computer Modern Roman']
+```
+
+```Mathematica
+GaussianIntegrator[{coeff_, exp_}, var_] := 
+ Module[{a, b, c, aa, bb, cc},
+  {c, b, a} = Series[exp + aa var^2 + var bb + cc, {var, 0, 2}][[3]];
+  {coeff Sqrt[\[Pi]/-a], (b^2)/(-4 a) + c} /. {aa -> 0, bb -> 0, 
+    cc -> 0}]
+
+gi=GaussianIntegrator
+
+psi[n_,x_]:=Sqrt[1/(2^n n! Sqrt[Pi])] Exp[-x^2/2] HermiteH[n,x]
 ```
