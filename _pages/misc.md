@@ -10,6 +10,7 @@ nav_order: 5
 * [Errata](https://nquesada.github.io/errata/) of some of my papers.
 * [Solutions](https://github.com/nquesada/Goldstein) to some of H. Goldstein's Classical Mechanics book problems.
 * Some useful equations in [Atomic Physics](https://nquesada.github.io/misce/atomic.pdf).
+* A conversion chart for [squeezing in different units](https://nquesada.github.io/misce/squeezing.pdf).
 * [&nabla; in cylindrical and spherical coordinates](https://nquesada.github.io/misce/DelFixed.pdf).
 * The classical version of [a and a<sup>&#8224;</sup>](https://nquesada.github.io/misce/sho.pdf).
 * The normal ordered form of [(a+a<sup>&#8224;</sup>)<sup>n</sup>](https://nquesada.github.io/misce/normal.pdf).
