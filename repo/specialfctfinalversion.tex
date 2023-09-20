@@ -1,0 +1,358 @@
+\documentclass[12pt]{article}
+
+%                   G. 't Hooft  macros version 2000
+
+\newread\testifexists
+\def\GetIfExists #1 {\immediate\openin\testifexists=#1
+    \ifeof\testifexists\immediate\closein\testifexists\else
+    \immediate\closein\testifexists\input #1\fi}
+
+%\usepackage{gthstyle}
+\mathsurround=1pt \parskip=5pt
+
+\def\epsffile#1{Figure: #1}     % (in case epsf does not exist)
+\GetIfExists  epsf
+    %  use:     \epsfxsize=<dimen> \epsfbox{filename.ps}
+    %  or:      \epsfysize=<dimen> \epsfbox{filename.ps}
+
+\def\Bbb#1{\setbox0=\hbox{$\tt #1$}  \copy0\kern-\wd0\kern .1em\copy0}
+    % (in case amssym does not exist)
+
+\def\bbf#1{\setbox0=\hbox{$#1$} \kern-.025em\copy0\kern-\wd0
+        \kern.05em\copy0\kern-\wd0 \kern-.025em\raise.0433em\box0}
+    % boldface in math mode.
+
+\GetIfExists  amssym.def          %% for \Bbb A - Z %%
+
+\def\a{\alpha}      \def\b{\beta}   \def\g{\gamma}      \def\G{\Gamma}
+\def\d{\delta}      \def\D{\Delta}  \def\e{\varepsilon}
+\def\h{\eta}         \def\k{\kappa} \def\l{\lambda}     \def\L{\Lambda}
+\def\m{\mu}         \def\f{\phi}    \def\F{\Phi}        \def\vv{\varphi}
+\def\n{\nu}         \def\j{\psi}    \def\J{\Psi}
+\def\r{\varrho}     \def\s{\sigma}  \def\SS{\Sigma}
+\def\t{\tau}        \def\th{\theta} \def\thh{\vartheta} \def\Th{\Theta}
+\def\x{\xi}         \def\X{\Xi}     \def\ch{\chi}
+\def\w{\omega}      \def\W{\Omega}  \def\z{\zeta}
+
+\def\HH{{\cal H}} \def\LL{{\cal L}} \def\OO{{\cal O}}
+\def\pa{\partial} \def\ra{\rightarrow}
+\def\na{\nabla}
+\def\bal{$\bullet$} \def\bel{$\circ$}
+\def\dd{{\rm d}}  \def\bra{\langle}   \def\ket{\rangle}
+
+\def\qu{\ {\buildrel {\displaystyle ?} \over =}\ }
+\def\deff{\ {\buildrel{\rm def}\over{=}}\ }
+
+\newcommand{\ft}[2]{{\textstyle\frac{#1}{#2}}}
+\def\fract#1#2{{\textstyle{#1\over#2}}}
+\def\ffract#1#2{\raise .3 em\hbox{$\scriptstyle#1$}\kern-.25em/
+                \kern-.2em\lower .2 em \hbox{$\scriptstyle#2$}}
+\def\fractje#1#2{{\scriptstyle{#1\over#2}}}
+\def\half{\fract12} \def\quart{\fract14} \def\halff{\ffract12}
+\def\halfje{\fractje12}
+\def\part#1#2{{\partial#1\over\partial#2}}
+\def\ex#1{e^{\textstyle#1}}
+
+\newcommand{\dddot}[1]{{\buildrel{\displaystyle{\,...}}\over #1}}
+
+\def\iz{\quad = \quad}
+\newcommand{\dys}{\displaystyle}
+\newcommand{\scs}{\scryptstyle}
+\newcommand{\txs}{\textstyle}
+
+
+\newcommand{\tl}[1]{\tilde{#1}}
+\renewcommand{\^}[1]{\hat{#1}}
+\newcommand{\sm}[1]{\mbox{\scriptsize #1}}
+\newcommand{\tn}[1]{\mbox{\tiny #1}}
+\newcommand{\Tr}{{\mbox{Tr}}\,}
+\newcommand{\be}{\begin{eqnarray}}
+\renewcommand{\le}[1]{\label{#1}\end{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\eqn}[1]{(\ref{#1})}
+\newcommand{\nn}{\nonumber\\}
+\newcommand{\nm}{\nonumber}
+\newcommand{\rf}[1]{\cite{ref:#1}}
+\newcommand{\rr}[1]{\bibitem{ref:#1}}
+
+\newcommand{\nl}{\newline}
+\newcommand{\cl}{\centerline}
+\newcommand{\fn}{\footnote}
+% \def\tcl{\textcolor}    \def\clb{\colorbox}
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.3in}
+\setlength{\topmargin}{-0.5in} \setlength{\textheight}{9in}
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+\newcommand{\newsec}[1]{\section{#1}\setcounter{equation}{0}}
+    % Counts equations as (section#, eq#)
+
+\begin{document}
+
+\begin{titlepage}
+
+\title{ \Large\bf
+SPECIAL FUNCTIONS and POLYNOMIALS\\}
+
+\author{\small Gerard 't~Hooft\\
+\small Stefan Nobbenhuis}
+\date{\small Institute for Theoretical Physics \\
+Utrecht University, Leuvenlaan 4\\ 3584 CC Utrecht, the
+Netherlands\medskip \\ and
+\medskip \\ Spinoza Institute \\ Postbox 80.195 \\ 3508 TD
+Utrecht, the Netherlands \smallskip}
+
+\maketitle
+
+\begin{quotation} \noindent  Many of the special functions
+and polynomials are constructed along standard procedures In this
+short survey we list the most essential ones.
+\end{quotation}
+
+\vfill \flushleft{\today}
+
+\end{titlepage}
+
+\eject
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newsec{Legendre Polynomials \(P_\ell(x)\)\ .}
+Differential Equation: \be (1-x^2)\,P_\ell\, ''(x)-2x\,P_\ell\,
+'(x)+\ell (\ell+1)\,P_\ell(x)\iz 0\ ,\nm\ee or \be {\dd\over\dd
+x}(1-x^2){\dd\over\dd x}\,P_\ell(x)+\ell(\ell+1)\,P_\ell(x)\iz 0\
+.\ee
+
+\bigskip\noindent Generating function:\be
+\sum_{\ell=0}^\infty\,P_\ell(x)t^\ell&=&(1-2xt+t^2)^{-\halfje}\
+\quad\mbox{for}\quad |t|<1, |x|\leq 1. \ee
+ Orthonormality: \be\int_{\raisebox{-.3em}{-1}}^{\raisebox
+{.3em}{1}} P_\ell(x)\,P_{\ell\,'}(x)\,\dd x&=&{2\over
+2\ell+1}\,\d_{\,\ell\,\ell\,'}\ ,\\ \sum_{\ell=0}^\infty
+P_\ell(x)P_\ell(x')(2\ell+1)&=&2\d(x-x')\ .\ee
+ Expressions for\(P_\ell(x)\)\,: \be P_\ell(x)&=&{1\over
+2^\ell}\sum_{\n=0}^{[\ell/2]}\,{(-1)^\n \, (2\ell-2\n)!\over
+\n!\,(\ell-\n)!\,(\ell-2\n)!}\,x^{\ell -2\n}\\ &=&
+{1\over\ell!\,2^\ell}\Big({\dd\over\dd x}\Big)^\ell\,(x^2-1)^\ell\
+,\\&=&{1\over\pi}\int_0^\pi(x+\sqrt{x^2-1}\cos\vv)^\ell\,\dd\vv\,
+. \ee
+ Recurrence relations: \be \ell\,P_{\ell-1}-(2\ell+1)\,x\,
+P_\ell+(\ell+1)\,P_{\ell+1} = 0\ ; \nn P_\ell =
+x\,P_{\ell-1}+{x^2-1\over\ell}\,P\,'_{\ell-1}\ \ ; \nn xP\,'_\ell\
+-\ \ell\,P_\ell = P\,'_{\ell-1}\ \ ;\nn
+xP\,'_\ell+(\ell+1)\,P_\ell&=& P\,'_{\ell+1}\ \ ;\nn {\dd\over\dd
+x}\left[P_{\ell+1}-P_{\ell-1}\right] = (2\ell+1) \, P_\ell .\ee
+ Examples: \be P_0=1\ ,\qquad P_1=x\ ,\qquad
+P_2=\half(3x^2-1)\ ,\qquad P_3=\half x(5x^2-3)\ .\ee \pagebreak[4]
+
+\newsec{Associated Legendre Functions \(P_\ell^m(x)\)\ .}
+Differential equation: \be
+(1-x^2)\,P_\ell^m(x)\,''-2x\,P_\ell^m(x)\,'+\Big(\ell(\ell+1)-{m^2\over
+1-x^2}\Big)\,P_\ell^m(x)&=&0\ .\ee
+ Generating function: \be\sum_{\ell=0}^\infty\,\sum_{m=0}^\ell\,
+{P_\ell^m(x)\,z^m\,y^\ell\over m!}&=&\left[1-2y\left(x+z
+\sqrt{1-x^2}\, \right)+y^2\right]^{-\half}\ .\ee
+ Orthogonality: \be\int_{\raisebox{-.3em}{-1}}^{\raisebox {.3em}{1}}
+P_\ell^m(x)\,P_{\ell\,'}^m(x)\,\dd x={2\over
+2\ell+1}\,{(\ell+m)!\over (\ell-m)!}\,\d_{\,\ell\,\ell\,'}\
+,\qquad (\,\ell,\,\ell\,'\geq m\,)\ .\ee \be \sum_{\ell=m}^\infty
+(2\ell+1){(\ell-m)!\over(\ell+m)!}\,P_\ell^m(x)\,P_\ell^m(x')=
+2\d(x-x')\ ,\qquad(\,|x|<1\hbox{ and }|x'|<1\,)\ .\ee
+ \noindent Expressions for \(P^m_\ell(x)\)\footnote{Note that some authors define $P_\ell^m(x)$ with a factor
+ $(-1)^m$, giving $P_\ell^m(x)=(-1)^m(1-x^2)^{\halfje m}\left(\dd\over\dd x\right)^m\,P_\ell(x)$. Obviously this minus
+sign propagates to the generating function, the recurrence
+relations and the explicit examples, when $m$ is odd.}: \be
+P_\ell^m(x)&=&(1-x^2)^{\halfje m}\left(\dd\over\dd
+x\right)^m\,P_\ell(x)\ .\ee \be P_\ell^m(x)&=&
+{(\ell+m)!\over\ell!\,\pi}(-1)^{m/2}\int_0^\pi\Big(x+\sqrt{x^2-1}\cos\vv\,\Big)^\ell\cos
+m\vv\,\dd\vv\ .\ee
+ Recurrence relations: \be P_{\ell}^{m+1} -
+ \frac{2mx}{\sqrt{1-x^2}}P_{\ell}^m +
+ \{\ell(\ell+1)-m(m-1)\}P_{\ell}^{m-1} = 0\ee
+\be \sqrt{1-x^2}\,P_\ell^{m+1}(x)&=&(1-x^2)\,P^m_\ell(x)\,'+ mx
+\,P_\ell^m(x)\ ,\nm\ee \be (2\ell+1)x\,P_\ell^m
+=(\ell+m)\,P_{\ell-1}^m+(\ell+1-m)\,P_{\ell+1}^m\ ,\ee \be
+x\,P_\ell^m &=& P_{\ell-1}^m-(\ell+1-m)\sqrt{1-x^2}\,P_\ell^{m-1}\
+,\nm\ee \be
+P^m_{\ell+1}-P^m_{\ell-1}&=&(2\ell+1)\,P_\ell^{m-1}\sqrt{1-x^2}\
+,\ee and various others. \par \noindent
+ Examples: \be P_1^1=\sqrt{1-x^2}
+&,\qquad& P_2^2=3(1-x^2)\ ,\nn P^1_2=3x\sqrt{1-x^2}&,\qquad&
+P^2_3=15\,x(1-x^2)\ .\ee  \pagebreak[4]
+
+\newsec{Bessel \(J_n(x)\) and Hankel \(H_n(x)\) functions.}
+Differential equation (for both \(J_n\) and \(H_n\)): \be
+x^2\,J_n''(x)+x\,J_n'(x)+(x^2-n^2)\,J_n(x)&=&0\ .\ee
+ Generating function (if \(n\) integer): \be \sum_{n=-\infty}^\infty
+J_n(\alpha x)\,\left(\frac{s}{\alpha}\right)^n&=&\ex{\fract x2\big(s-\frac {\alpha^2}s\big)}\ ,\\
+J_{-n}=(-1)^n\,J_n\ .\nm\ee Orthogonality:
+\be\int_0^\infty\,\xi\,J_n(\a\xi)\,J_n(\b\xi)\,\dd\xi ={ 1\over
+\a}\,\d(|\a|-|\b|)\ .\ee
+\be\int_0^a\,\xi\,J_n(\a\xi)\,J_n(\b\xi)\,\dd\xi ={ a^2\over
+2}\,\{J_{n+1}(\a a)\}^{2}\d_{\a\b}\ .\ee if in the $2^{nd}$
+relation $\a,\b$ are roots of the equation $J_n(\a\xi)=0$.
+
+
+ Expressions for \(J_n(x)\) (for \(n\)
+integer): \be J_n(x)&=&\sum_{k=0}^\infty{(-1)^k\over
+k!\,(k+n)!}\,\Big(\,{x\over2}\,\Big)^{n+2k}\iz {1\over 2\pi
+i}\,\Big(\,{x\over2}\,\Big)^n\oint t^{-n-1}\dd t\,e^{\,t- x^2/4t}
+\ . \\ J_n(x)&=& {1\over\pi}\int_0^\pi\cos\big(n\th-x\,
+\sin\th\big)\,\dd\th\ . \ee
+ Recurrence relations (for both \(J_n\) and \(H_n\)):
+ \be\frac{d}{dx}\{x^n\,J_n(x)\}&=& x^n\,J_{n-1}(x)\ ;\nn
+  J_{n-1}(x)+J_{n+1}(x) &=& {2n\over x}\,J_n(x)\ ;\nn
+ J\,'_n(x)\iz J_{n-1}(x)-{n\over x}\,J_n(x) &=& {n\over x}\,J_n(x)
+-J_{n+1}(x) = \vphantom{n\over x}
+\half\big(J_{n-1}(x)-J_{n+1}(x)\big)\
+ .\ee
+  Relations between Hankel and Bessel functions: \be
+H^{(1)}_n(x)&=&{i\over \sin n\pi}\,\Big(e^{-n\pi
+i}J_n(x)-J_{-n}(x)\Big)\ ;\nn H^{(2)}_n(x)&=&{-i\over \sin
+n\pi}\,\Big(e^{n\pi i}J_n(x)-J_{-n}(x)\Big)\ ,\ee so that \be
+J_n(x)&=&\half\Big(H^{(1)}_n(x)+H^{(2)}_n(x)\Big)\ ;\nn
+J_{-n}(x)&=&\half\Big(e^{n\pi i}H_n^{(1)}(x)+e^{-n\pi
+i}H_n^{(2)}(x)\Big)\ .\ee\pagebreak[4]
+
+\newsec{Spherical Bessel Functions \(j_\ell(x)\).} Differential
+equation: \be (xj_\ell)''+\Big(x-{\ell(\ell+1)\over
+x}\Big)\,j_\ell=0\ .\ee Generating Function:
+\be\sum_{\ell=0}^\infty{j_\ell(x)\,t^\ell\over
+\ell!}=j_0\Big(\sqrt{x^2-2xt}\,\Big)\ .\ee Orthogonality: \be
+\int_0^\infty x^2j_\ell(\a x)\ j_\ell(\b x)\ \dd x={\pi\over
+2\a}\,\d(\a-\b)\ .\ee\be \int_{-\infty}^\infty j_\ell(x)\,
+j_{\ell'}(x)\ \dd x={\pi\over 2\ell +1}\,\d_{\ell\ell'}\ .\ee
+Expressions for \(j_\ell\)\,: \be j_\ell(x)=\sqrt{\pi\over 2x}\
+J_{\ell+\halfje}(x) = (-1)^\ell
+x^\ell\left(\frac{d}{xdx}\right)^\ell\frac{\sin x}{x}\ ,\ee \be
+j_\ell(x) &=& {x^\ell\over 2^{\ell+1}\,\ell !}\,\int_{-1}^1
+e^{ixs}(1-s^2)^\ell\,\dd s \nn &=& {2^\ell\ell!\over(2\ell+1)!}\,
+x^\ell\,\bigg(1-{1\over 1!\,(\ell+\fract 32)}\,\Big({x\over2}\Big)^2+
+{1\over 2!(\ell+\fract32)(\ell+\fract52)}\,\Big({x\over
+2}\Big)^4-\dots\bigg)\ .\ee Recurrence relations: \be j_{\ell+1} =
+\frac{\ell}{x}j_{\ell} -
+j'_{\ell}=\frac{2\ell+1}{x}j_{\ell}-j_{\ell-1}.\ee Examples: \be
+j_0(x)&=&{\sin x\over x}\ ;\nn j_1(x)&=&{\sin x\over x^2}-{\cos
+x\over x}\ ;\nn j_2(x)&=&{3\sin x\over x^3}-{3\cos x\over x^2} -{\sin
+x\over x}.\ee \pagebreak[4] \newsec{Hermite Polynomials \(H_n(x)\).}
+Differential equation: \be H_n''(x)-2x\,H_n'(x)+2n\,H_n(x)=0\ ,\nm\ee
+or \be {\dd^2\over\dd x^2}\Big(H_n(x)\,e^{-\halfje
+x^2}\Big)+(2n-x^2+1)\,H_n(x)\,e^{-\halfje x^2}=0\ .\ee Generating
+function: \be\sum_{n=0}^\infty H_n(x)\,s^n/n!=e^{-s^2+2sx}. \ee
+Orthogonality: \be\int_{-\infty}^\infty H_n(x)\,H_m(x)\,
+e^{-x^2}\dd x=2^nn!\sqrt\pi\,\d_{nm}\\
+\sum_{n=0}^\infty H_n(x)\,H_n(y)/(2^n
+n!)=\sqrt\pi\,\d(x-y)\,e^{x^2}\ .\ee More general:
+\be\sum_{n=0}^\infty
+H_n(x)\,H_n(y)\,s^n/(2^nn!)={1\over\sqrt{1-s^2}}\exp\Big({-s^2(x^2+y^2)+2sxy\over
+1-s^2}\Big)\ .\ee Expressions for \(H_n\)\,: \be H_n(-x)
+&=&(-1)^n\,H_n(x);\\
+H_n(x)&=&(-1)^n\,e^{x^2}\Big({\dd\over\dd x}\Big)^n e^{-x^2}\ ;\\
+H_n(x)&=&(-1)^{n/2}n!\sum_{k=0}^{n/2}(-1)^k\,{(2x)^{2k}\over(2k)!\,(\halfje
+n-k)!}\ ,\qquad\quad\hbox{ if \(n\) even,}\nn
+H_n(x)&=&\big(-1\big)^{n-1\over 2}n!\sum_{k=0}^{n-1\over
+2}(-1)^k\, {(2x)^{2k+1}\over (2k+1)!\,\Big({n-1\over 2}-k\Big)!} \
+,\quad\hbox{ if \(n\) odd.}\ee Recurrence relations: \be{\dd^m
+H_n(x)\over\dd x^m}&=&{2^{m}n!\over(n-m)!}\,H_{n-1}(x)\ ,\\
+x\,H_n(x)&=& \half H_{n+1}(x)+n\,H_{n-1}(x)\ ,\\
+H_n(x)&=&\bigg(2x-{\dd\over\dd x}\bigg)\,H_{n-1}(x)\ .\ee
+Examples: \be H_0(x)=1\ ,\qquad H_1(x)=2x\ ,\qquad H_2(x)=4x^2-2\
+.\ee \pagebreak[4]
+
+\newsec{Laguerre Polynomials \(L_n(x)\).}
+Differential equation: \be x\,L_n''(x)+(1-x)\,L_n'(x)+n\,L_n(x)=0\
+ . \ee Generating function:\footnote{It's important to note that sometimes different definitions are
+ used for the Laguerre and Associated Laguerre polynomials, where
+ the Generating Function has the form: $\sum_{n=0}^\infty L_n(x)\,z^n/n!={1\over 1-z}\,\ex{{-xz\over
+ 1-z}}$. In this case the Expressions given for $L_n$ should be multiplied by $n!$.} \be \sum_{n=0}^\infty L_n(x)\,z^n={1\over 1-z}\,\ex{{-xz\over 1-z}}\ .\ee Orthogonality:
+\be\int_0^\infty L_n(x)\,L_m(x)\,e^{-x}\,\dd x=\d_{nm}\ .\ee
+Expressions for \(L_n\)\,: \be L_n(x)&=&{e^x\over n!}
+\Big({\dd\over\dd x}\Big)^n\,(x^n\,e^{-x})\nn &=&{(-1)^n\over n!}
+\,\Big(x^n-{n^2\over 1!}\,x^{n-1}+{n^2(n-1)^2\over
+2!}\,x^{n-2}-\dots\,+(-1)^nn!\Big)\
+ .\ee Recurrence relation:
+\be(1+2n-x)\,L_n-n\,L_{n-1}-(n+1)L_{n+1}=0\ ;\nn
+x\,L'_n(x)=n\,L_n(x)-n\,L_{n-1}(x)\ .\ee Examples: \be L_0(x)&=&1\
+;\nn L_1(x)&=&1-x\ ;\nn
+L_2(x)&=&\frac{1}{2!}(x^2-4x+2).\ee\pagebreak[4]
+
+\newsec{Associated Laguerre Polynomials \(L_n^k(x)\)\,.}
+Differential equation:\be
+x\,{L_n^k}''+(k+1-x)\,{L_n^k}'+n\,L_n^k=0\ .\ee Generating
+function:\be \sum_{n=0}^\infty L_n^k(x)\,z^n={1\over
+(1-z)^{k+1}}\,\ex{{-xz\over 1-z}}\
+.\ee\be\sum_{k=0}^\infty\,\sum_{n=k}^\infty{L_n^k(x)\,z^nu^k\over
+k!}={1\over 1-z}\,\exp\Big({-xz+u\over 1-z}\Big)\ .\ee\
+Orthogonality: \be\int_0^\infty
+L_n^k(x)\,L_m^k(x)\,x^k\,e^{-x}\,\dd x=\frac{(n+k)!}{n!}\d_{nm}\
+.\ee Expressions for \(L_n^k\)\,:\be
+L_n^k(x)=(-1)^k\Big({\dd\over\dd x}\Big)^k\,L_{n+k}(x)\ .\ee\be
+L_n^k(x)={e^xx^{-k}\over n!} \Big({\dd\over\dd
+x}\Big)^n\,(x^{n+k}\,e^{-x})\ .\ee
+ Recurrence
+relation: \be L_{n-1}^k\,(x)+L_n^{k-1}\,(x) = L_n^k\,(x)\ ;\nn
+x\,L_n^{k'}\,(x) = n\,L_n^k\,(x)-(n+k)L_{n-1}^k\,(x)\ .\ee
+Examples: \be L_0^k(x)&=&1\ ;\nn L_1^k(x)&=&-x+k+1\ ;\nn
+L_2^k(x)&=&{1\over 2} \left[x^2-2(k+2)x+(k+1)(k+2)\right]\ ;\nn
+L_3^k(x)&=&{1\over
+6}\left[-x^3+3(k+3)x^2-3(k+2)(k+3)x+(k+1)(k+2)(k+3)\right]
+.\ee\pagebreak[4]
+
+\newsec{Tschebyscheff\protect\footnote{Transliterations Chebyshev and
+Tchebicheff also occur.} Polynomials \(T_n(x)\).} Differential
+equation: \be (1-x^2){\dd^2\over\dd x^2}\,T_n(x)-x{\dd\over\dd
+x}\,T_n(x)+n^2\,T_n(x)=0\ .\ee
+ Generating function: \be \sum_{n=0}^\infty
+T_n(x)\,y^n={1-xy\over 1-2xy+y^2}. \ee Symmetry relation: \be
+T_n(x)=T_{-n}(x).\ee
+Orthogonality:\be\int_{-1}^1{T_m(x)T_n(x)\over\sqrt{1-x^2}}\dd
+x=\left\{\begin{array}{ll}
+\halfje\pi\d_{nm}&m,n\neq 0\\
+\pi &m=n=0\end{array}\right.\ee Expression for \(T_n\): \be T_n(x)
+=\cos(n\cos^{-1}x)\ee \be
+T_n(x)=\halfje\left[\left\{x+i\sqrt{1-x^2}\right\}^n+\left\{x-i\sqrt{1-x^2}\right\}^n\right].\ee
+Recurrence relation: \be T_{n+1}-2x\,T_n(x)+T_{n-1}=0\
+\ee\be(1-x^2)T'_n(x)=-nx\,T_n(x)+n\,T_{n-1}(x).\ee Examples: \be
+T_0(x)&=&1\ ;\nn T_1(x)&=&x\ ;\nn T_2(x)&=&2x^2-1\ ;\nn
+T_3(x)&=&4x^3-3x .\ee \pagebreak[4]
+
+\newsec{Remark.}All of the functions discussed here are special
+cases of ``hypergeometric functions"\\ \({}_mF_n(a_1,a_2,\dots
+a_m;b_1,b_2,\dots b_n;z)\) defined by: \be {}_mF_n(a_1,a_2,\dots
+a_m;b_1,b_2,\dots b_n;z) =
+\sum_{r=p}^{\infty}\frac{(a_1)_r(a_2)_r\dots(a_m)_rz^r}{(b_1)_r(b_2)_r\dots(b_n)_rr!},\ee
+where \be (a)_r
+\equiv\frac{\Gamma(a+r)}{\Gamma(a)};\quad\quad\mbox{$r$ a positive
+integer.} \ee Differential equations:\\ $m=n=1$: \be
+z\Big({\dd\over\dd z}\Big)^2{}_1F_1+(b-z){\dd\over\dd
+z}{}_1F_1-a\,\,{}_1F_1=0\ .\ee $m=2,n=1$:\be
+z(1-z)\Big({\dd\over\dd
+z}\Big)^2{}_2F_1+\Big(c-(a+b+1)z\Big){\dd\over\dd
+z}{}_2F_1-ab\,\,{}_2F_1=0\ .\ee We have: \be P_\ell(x)
+&=& {}_2F_1\left(-\ell,\ell+1;1;{1-x\over2}\right)\ ;\nn\\
+P_\ell^m(x) &=&
+\frac{(\ell+m)!}{(\ell-m)!}\frac{(1-x^2)^{m/2}}{2^mm!}{}_2F_1\left(m-\ell,m+\ell+1;m+1;{1-x\over2}\right)\
+;\nn\\
+J_n(x)&=&\frac{e^{-ix}}{n!}\left(\frac{x}{2}\right)^n{}_1F_1(n+\halfje;2n+1;2ix)\
+;\nn\\
+H_{2n}(x)&=&(-1)^{n}\frac{(2n)!}{n!}{}_1F_1(-n;\halfje;x^2)\
+;\nn\\
+H_{2n+1}(x)&=&(-1)^{n}\frac{2(2n+1)!}{n!}x{}_1F_1(-n;\fractje{3}{2};x^2)\
+;\nn\\
+L_n(x)&=&{}_1F_1(-n;1;x)\ ;\nn\\
+L_n^k(x)&=&\frac{\Gamma(n+k+1)}{n!\Gamma(k+1)}{}_1F_1(-n;k+1;x)\
+;\nn\\ T_n(x)&=&{}_2F_1\left(-n,n;\halfje;{1-x\over 2}\right)\ .
+\ee\pagebreak[4]
+
+\begin{thebibliography}{99}
+
+\bibitem{MM} H. Margenau and G.M. Murphy, \emph{The Mathematics
+of Physics and Chemistry}, D. van Nostrand Comp. Inc., 1943, 1956.
+\bibitem{GR} I.S. Gradshteyn and I.W. Ryzhik,\emph{ Tables of Integrals,
+Series and Products}, Acad. Press, New York, San Francisco,
+London, 1965.
+\bibitem{WB} W.W. Bell, \emph{Special Functions for Scientists and
+Engineers}, D. van Nostrand Comp. Ltd., 1968.
+
+\end{thebibliography}
+
+\end{document}
