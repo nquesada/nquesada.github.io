@@ -18,7 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an [assistant professor](https://www.polymtl.ca/expertises/quesada-nicolas) at the Department of Engineering Physics of the [École Polytechnique de Montréal](https://www.polymtl.ca/) where I hold an MEI Research Chair in Quantum Photonics and lead the [Polyquantique Research Group](https://qpi.polytml.ca). 
+I am an [assistant professor](https://www.polymtl.ca/expertises/quesada-nicolas) at the Department of Engineering Physics of the [École Polytechnique de Montréal](https://www.polymtl.ca/) where I hold an MEI Research Chair in Quantum Photonics and lead the [Polyquantique Research Group](https://qpi.polymtl.ca). 
 
 I am affiliated with two of [FRQNT](https://frq.gouv.qc.ca/en/)'s Regroupements stratégiques: [INTRIQ](https://www.intriq.org) and [COPL](https://coplweb.ca/). 
 
