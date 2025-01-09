@@ -1,0 +1,74 @@
+\documentclass[english,12pt]{shreyasnotes}
+
+\newcommand{\hc}{\text{H.c.}}
+\newcommand{\cc}{\text{c.c.}}
+\newcommand{\vac}{\text{vac}}
+\newcommand{\h}{\hat}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\thf}{\text{TopHat}}
+\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+
+
+
+\title{Fourier Transforms and Discrete Fourier Transforms}
+\author{Nicol\'as Quesada}
+\date{}
+\begin{document}
+\maketitle
+The Fourier Transform (FT) of a function can be defined as
+\eq{
+F(\omega)=\int_{-\infty}^\infty dt \ f(t) e^{-\ii \omega t}.
+}
+We can approximate this integral by a Riemann sum
+\eq{
+F(\omega) \approx \Delta t \sum_{j=0}^{N-1} f(t_j) e^{-\ii \omega t_j}.
+}
+where we use the following definitions
+\eq{\label{defs}
+\Delta t=\frac{t_f-t_i}{N} \text{ and } t_j=t_i+j \Delta t.
+}
+Note however that $t_0=t_i$ but $t_N=t_i/N+(1-1/N) t_f \neq t_f$. Nevertheless, when $N \gg 1$ one has $t_N \to t_f$. Note also that if $N$ is even then $t_{N/2}=(t_f+t_i)/2$. 
+
+Now let us pick $\omega$ to be a multiple of some (at the moment) undetermined frequency $\Delta \omega$, $\omega=k \Delta \omega$ and write $t_j=t_i+j \Delta t$
+\eq{
+F(k \Delta \omega)&\approx \Delta t\sum_{j=0}^{N-1} f(t_j) e^{-\ii k \Delta \omega (t_i+j \Delta t)}=\Delta t e^{-\ii k \Delta \omega t_i}\sum_{j=0}^{N-1} f(t_j) e^{-\ii k j \Delta \omega  \Delta t}.
+}
+It is convenient to pick $\Delta \omega = 2 \pi/(\Delta t N)=2 \pi /(t_f-t_i)$ to get
+\eq{\label{almost}
+F(k \Delta \omega)&\approx \Delta t e^{-\ii k \Delta \omega t_i}\sum_{j=0}^{N-1} f(t_j) e^{-2 \pi \ii k  j/N}.
+}
+If we define $x_j=f(t_j)$ then we can identify
+\eq{\label{DFT}
+X_k=\sum_{j=0}^{N-1} x_j e^{-2 \pi \ii k  j/N}\equiv \mathcal{F}\left(\{x_j \}\right),
+}
+as the Discrete Fourier transform of the sequence $x_j$ and write the FT  $F(k \Delta \omega)$ in terms of the DFT
+\eq{\label{quasi}
+F(k \Delta \omega)&\approx \Delta t e^{-\ii k \Delta \omega t_i} X_k.
+}
+Typically one will pick $t_i=-t_f$ in which case the prefactor in Eq. (\ref{almost}) becomes
+\eq{
+e^{-\ii k \Delta \omega t_i}=e^{-\ii k \frac{(2 \pi)}{(-t_i-t_i)} t_i}=e^{\ii k \pi}=(-1)^k.
+}
+
+Now let us assume that the function $f(t)$ is real and symmetric, $f(t)=f(-t)$. Then, one can easily show that the function $F(\omega)$ is real. Does the same hold true for the sequences $x_j$ and $X_k$? Indeed, it does, if one defines a symmetric sequence to satisfy $x_j=x_{N-j}$ then one can, using the definition of DFT in Eq. (\ref{DFT}), show that $X_k=X_k^*$. Now, how one should sample $f(t)$ in such away that the Fourier transform obtained by using the DFT satisfies the type of symmetries mentioned before?
+It turns out that by sampling as in Eq. (\ref{defs}) with $t_f=-t_i$ one gets the desired property since
+\eq{
+x_{N-j}&=f(t_i+(N-j)\Delta t)=f(t_i+N\Delta t-j\Delta t)=f(t_i+t_f-t_i-j \Delta t  )\\
+&=f(t_f-j\Delta t )=f(-t_i-j \Delta t )=f(t_i+j \Delta t )=x_j. \nonumber
+}
+In the last two equalities we used the fact that $t_i=-t_f$ and that $f(t)=f(-t)$.
+
+One final question is how to get rid of the annoying factor $(-1)^k$ in Eq. (\ref{quasi}). We can rewrite it as
+\eq{
+F(k \Delta \omega)&\approx \Delta t e^{-\ii k \Delta \omega t_i} X_k=\Delta t \sum_{j=0}^{N-1} f(t_j) e^{-2 \pi \ii k  j/N} e^{-\ii \pi k }=\Delta t \sum_{j=0}^{N-1} f(t_j) e^{-2 \pi \ii k  (j+N/2)/N}.
+}
+Now note that the $j$ indices are only defined modulo $N$, if we let $j \to j+N$ we get the same DFT since $e^{2 \pi \ii k(j+N)/N}=e^{2 \pi \ii k j /N}$, thus we can identify
+\eq{
+x_{(j+N/2) \text{mod} N} = f(t_j),
+} 
+and write
+\eq{
+F(k \Delta \omega)&\approx \Delta t \mathcal{F}\left(\{x_{(j+N/2) \text{mod} N} \}\right),
+}
+which gives directly the FT in terms of the DFT of the (re-arranged) sampled values.
+\end{document}

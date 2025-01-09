@@ -1,0 +1,9 @@
+GaussianIntegrator[{coeff_, exp_}, var_] := 
+ Module[{a, b, c, aa, bb, cc},
+  {c, b, a} = Series[exp + aa var^2 + var bb + cc, {var, 0, 2}][[3]];
+  {coeff Sqrt[\[Pi]/-a], (b^2)/(-4 a) + c} /. {aa -> 0, bb -> 0, 
+    cc -> 0}]
+
+gi=GaussianIntegrator
+
+psi[n_,x_]:=Sqrt[1/(2^n n! Sqrt[Pi])] Exp[-x^2/2] HermiteH[n,x]

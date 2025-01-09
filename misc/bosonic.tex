@@ -1,0 +1,51 @@
+\documentclass[english,11pt]{shreyasnotes}
+\newcommand{\eq}[1]{\begin{align*}#1\end{align*}}
+
+\date{}
+
+\title{Useful Identities in Quantum Optics}
+\author{Nicol\'as Quesada}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\subsection*{Notation}
+Latin letters with a hat ($\hat a, \hat x, \hat y, \hat z$) denote linear operators.\\
+Greek letters ($\alpha, \lambda$) denote $\mathbb{C}$ numbers.\\
+The hermitian adjoint of $\hat a$ is denoted $\hat a^{\dagger}$.\\
+The commutator of two operators $\hat x$ and $\hat y$ is defined as:
+$ [\hat x,\hat y] := \hat x \hat y-\hat y \hat x$ \\
+
+\subsection*{Leibniz's law }
+
+\eq{ [\hat x, \hat y \hat z]=[\hat x, \hat y] \hat z+\hat y[\hat x,\hat z], \quad 
+ [\hat x \hat y, \hat z]=[\hat x, \hat z] \hat y+\hat x[\hat y,\hat z] 
+}
+
+\subsection*{Jacobi Identity}
+\eq{
+ [\hat x, [ \hat y, \hat z]]+[ \hat y,[ \hat z,\hat x]]+[\hat z, [\hat x, \hat y]]=0 
+}
+\subsection*{Baker-Campbell-Hausdorff formula}
+If $[\hat x,[\hat x,\hat y]]=[\hat y,[\hat x,\hat y]]=0$ then
+\eq{e^{\hat x+\hat y}=\exp{\left(-\frac{1}{2} [\hat x,\hat y] \right)} e^{\hat x} e^{\hat y}=\exp{\left(\frac{1}{2} [\hat x,\hat y] \right)} e^{\hat y} e^{\hat x} }
+
+\subsection*{Hadamard lemma}
+\eq{ e^{ i \lambda \hat x} \hat y e^{- i \lambda \hat x}=\hat y + i \lambda [\hat x,\hat y]+\frac{(i \lambda)^2}{2!}[\hat x,[\hat x,\hat y]]+\ldots}
+
+\subsection*{Identities for Bosonic Operators}
+The bosonic operators $\hat a$ and $\hat a^\dagger$ satisfy $[\hat a,\hat a^\dagger]=\hat 1$
+\eq{[\hat a,f(\hat a,\hat a^\dagger)]=\frac{\partial f}{\partial \hat a^\dagger}, \quad 
+ [\hat a^\dagger,f(\hat a,\hat a^\dagger)]=-\frac{\partial f}{\partial \hat a},\\
+e^{-\alpha \hat a^\dagger \hat a} f(\hat a,\hat a^\dagger) e^{\alpha \hat a^\dagger \hat a}=f(\hat a e^\alpha,\hat a^\dagger e^{-\alpha})
+}
+
+\begin{thebibliography}{}
+\bibitem{} J.J. Sakurai, \textit{Modern Quantum Mechanics}, Addison Wesley Longman
+\bibitem{} M.O. Scully, M.S. Zubairy \textit{Quantum Optics}, Cambridge University Press.
+\end{thebibliography}
+
+
+\end{document}
+

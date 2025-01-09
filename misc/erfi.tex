@@ -1,0 +1,59 @@
+\documentclass[english,12pt]{shreyasnotes}
+
+\usepackage{esint}
+
+\newcommand{\eq}[1]{\begin{align}#1\end{align}}
+\DeclareMathOperator{\erfi}{erfi}
+\newcommand{\iu}{\text{i}}
+
+
+\title{An identity involving the imaginary error function $\erfi x$}
+\author{Nicol\'as Quesada and Aaron Goldberg}
+\date{}
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+The imaginary error function erfi($x$) is customarily defined as $\erfi(x) = \frac{2}{\sqrt{\pi}} \int_0^x dt \ e^{t^2}$.
+It is related to the error function by erfi($x$)= erf($\iu x$)/\iu, and can be also defined as
+\eq{
+\frac{1}{\pi} \fint_{-\infty}^{\infty} dy\ \frac{e^{a y^2 +2 b y}}{ y} = \frac{2}{\pi}\int_0^\infty dy \ e^{a y^2}\frac{\sinh(2 b y)}{ y}=\erfi\left(\frac{b}{\sqrt{-a}}\right) \text{ for } a<0.
+\label{eq:erfi-principal-integral}
+}
+In this note we investigate a property of a function related to the imaginary error function.
+
+We can define two functions
+\eq{
+  \phi_0(x)\equiv\frac{\exp\left(-x^2\right)}{\sqrt[4]{\pi/2}}, 
+\quad   \phi_1(x)\equiv%\sqrt{3}\phi_0\left(x\right)\erfi\left(\sqrt{\frac{2}{3}}x\right),
+\mathcal{N}\left(\alpha\right)\phi_0\left(x\right)\erfi\left(\alpha x\right),
+\quad	\mathcal{N}\left(\alpha\right)=\sqrt{\frac{\pi}{2\sin^{-1}\left(\frac{\alpha^2}{2-\alpha^2}\right)}},
+}
+whose $\mathcal{L}^2$-orthogonality is seen from their respective parities. 
+
+We here show that $\phi_1$ is, like $\phi_0$, $\mathcal{L}^2$-normalized; to this end consider the integral
+\eq{
+  I&=\int_{-\infty}^\infty dx \ \phi_1^2\left(x\right) =\mathcal{N}^2\sqrt{\frac{2}{\pi}}\int_{-\infty}^\infty dx  \exp\left(-2x^2\right)\erfi^2\left(\alpha x\right).
+}
+This integral is, to the best of our knowledge, not currently tabulated in standard computer algebra systems (CAS) like \href{http://www.wolfram.com/mathematica/}{Mathematica} or \href{http://www.maplesoft.com/}{Maple} or the \href{http://functions.wolfram.com/GammaBetaErf/Erfi/}{Wolfram Functions Site}.\footnote{except for $\alpha=1$ when $\phi_1(x)|_{\alpha=1} = \sqrt[4]{\frac{2}{\pi}} F(x) $ is proportional to the \href{https://mathworld.wolfram.com/DawsonsIntegral.html}{Dawson function} $F(x)$.}
+We use Eq. (\ref{eq:erfi-principal-integral}) to write
+\begin{subequations}
+\eq{
+  I&=\frac{\mathcal{N}^2}{\pi^2}\sqrt{\frac{2}{\pi}}\int_{-\infty}^\infty dx\exp\left(-2x^2\right)\fint_{-\infty}^\infty \frac{du}{u} \exp\left(-\frac{u^2}{\alpha^2}+2ux\right)\fint_{-\infty}^\infty \frac{dv}{v} \exp\left(-\frac{v^2}{\alpha^2}+2vx\right)\\
+  &=\frac{\mathcal{N}^2}{\pi^2}\sqrt{\frac{2}{\pi}}\fint_{-\infty}^\infty \frac{du}{u}\fint_{-\infty}^\infty \frac{dv}{v}
+  \exp\left(-\frac{u^2}{\alpha^2}-\frac{v^2}{\alpha^2}\right) \int_{-\infty}^\infty dx \exp\left(-2x^2+2ux+2vx\right)\\
+  &=\frac{\mathcal{N}^2}{\pi^2}\fint_{-\infty}^\infty \frac{du}{u}\exp\left(-\beta u^2\right)\fint_{-\infty}^\infty \frac{dv}{v}
+  \exp\left(-\beta v^2+uv\right),
+}
+\end{subequations}
+where we have liberally switched the order of the integrals and written $\beta=1/\alpha^2-1/2$. We now again use Eq. (\ref{eq:erfi-principal-integral}) to find
+\eq{
+  I&=\frac{\mathcal{N}^2}{\pi^2}\fint_{-\infty}^\infty \frac{du}{u}\exp\left(-\beta u^2\right)\left(\pi \ \erfi\left(\frac{u}{2\sqrt{\beta}}\right)\right)
+  %=\frac{2\mathcal{N}^2}{\pi}\underbrace{\int_{0}^\infty \frac{du}{u}\exp\left(-u^2\right)\erfi\left(\frac{u}{2}\right)}_{=\pi/6}
+  =\frac{2\mathcal{N}^2}{\pi}\underbrace{\int_{0}^\infty \frac{du}{u}\exp\left(-\beta u^2\right)\erfi\left(\frac{u}{2\sqrt{\beta}}\right)}_{\sin^{-1}\frac{1}{2\beta}}
+  =1.
+  \label{eq:integral equals 1}
+}
+The last integral can be evaluated using any of the aforementioned CAS for $\left|\beta\right|\geq1/2,\Re\left[\beta\right]>0$ (i.e., $\left|\alpha\right|\leq 1$% $\alpha^2+\alpha^{*2}\leq 2, \Re\left[\alpha\right]^2-\Im\left[\alpha\right]^2\geq 2\left|\alpha\right|^2$
+). Eq. (\ref{eq:integral equals 1}) shows that the set $\{\phi_0,\phi_1 \}$ forms an (incomplete) ortho\emph{normal} set in $\mathcal{L}^2$.
+\end{document}

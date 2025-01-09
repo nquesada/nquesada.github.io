@@ -1,0 +1,69 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\newcommand{\pr}[1]{| #1 \rangle \langle #1|}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\braket}[1]{\langle #1 \rangle}
+\newcommand{\h}{\hat}
+\pagenumbering{gobble} 
+\usepackage{hyperref}
+%
+%\lhead{Conversion between different squeezing parameters}
+
+\begin{document}
+
+\begin{table}[!h]
+\centering
+{\Large
+\begin{tabular}{lllll}
+\hline
+Sq.(dB) & ${\frac{V_x(0)}{V_x(r)}}$ & $\sqrt{\frac{V_x(0)}{V_x(r)}}$ & $\langle \hat n \rangle$ & $r$ \\
+
+\hline
+\hline
+ 1 & 0.794 & 0.891 & 0.0133 & 0.115 \\
+ 2 & 0.631 & 0.794 & 0.0540 & 0.230 \\
+ 3 & 0.501 & 0.708 & 0.124 & 0.345 \\
+ 4 & 0.398 & 0.631 & 0.227 & 0.461 \\
+ 5 & 0.316 & 0.562 & 0.370 & 0.576 \\
+ 6 & 0.251 & 0.501 & 0.558 & 0.691 \\
+ 7 & 0.200 & 0.447 & 0.803 & 0.806 \\
+ 8 & 0.158 & 0.398 & 1.12 & 0.921 \\
+ 9 & 0.126 & 0.355 & 1.52 & 1.04 \\
+ 10 & 0.100 & 0.316 & 2.03 & 1.15 \\
+ 11 & 0.0794 & 0.282 & 2.67 & 1.27 \\
+ 12 & 0.0631 & 0.251 & 3.48 & 1.38 \\
+ 13 & 0.0501 & 0.224 & 4.50 & 1.50 \\
+ 14 & 0.0398 & 0.200 & 5.79 & 1.61 \\
+ 15 & 0.0316 & 0.178 & 7.41 & 1.73 \\
+ 16 & 0.0251 & 0.158 & 9.46 & 1.84 \\
+ 17 & 0.0200 & 0.141 & 12.0 & 1.96 \\
+ 18 & 0.0158 & 0.126 & 15.3 & 2.07 \\
+ 19 & 0.0126 & 0.112 & 19.4 & 2.19 \\
+ 20 & 0.0100 & 0.100 & 24.5 & 2.30 \\
+ 21 & 0.00794 & 0.0891 & 31.0 & 2.42 \\
+ 22 & 0.00631 & 0.0794 & 39.1 & 2.53 \\
+ 23 & 0.00501 & 0.0708 & 49.4 & 2.65 \\
+ 24 & 0.00398 & 0.0631 & 62.3 & 2.76 \\
+ 25 & 0.00316 & 0.0562 & 78.6 & 2.88 \\
+ 26 & 0.00251 & 0.0501 & 99.0 & 2.99 \\
+\hline
+\end{tabular}
+} \\
+ {\small Squeezed states:
+$\ket{r} =\exp\left(\frac{r}{2} (a^{\dagger 2}-a^2) \right)\ket{0} = \frac{1}{\sqrt{\cosh{r}}} \sum_{n=0}^\infty \frac{\sqrt{(2n)!}}{2^n n!} \tanh^n(r) \ket{2n}$. \\
+Variances: $V_x(r)/V_x(0) = e^{2r} = V_p(0)/V_p(r)$.  Squeezing level in dB: $-10 \log_{10} \frac{V_x(r)}{V_x(0)}$ \\
+Photon number moments: $\langle \hat n \rangle  = \langle \hat a^\dagger \hat a \rangle  = \sinh^2 r$, $\langle \hat n^2 \rangle = 3 \langle \hat n \rangle ^2 + 2 \langle \hat n \rangle$. \\
+Pair number distribution: if $N=2n$ with PMF $p(N=2n) = |\braket{2n|r}|^2$ then $N$ has a negative binomial distribution $\text{NB}\left(r=\tfrac{1}{2},p = 1-\tanh^2 r\right)$. \\}
+{\tiny This file can be found at \url{https://www.physics.utoronto.ca/~nquesada/misc/squeezing.pdf} }
+
+
+\end{table}
+
+
+
+\end{document}

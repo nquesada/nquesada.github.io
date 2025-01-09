@@ -1,0 +1,73 @@
+\documentclass[english,11pt]{shreyasnotes}
+\usepackage{bbm}
+
+\title{Useful Identities in Atomic Physics}
+%\author{Nicol\'as Quesada}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\noindent The quantum numbers of the energy eigenstates of the non-relativistic hydrogenoid atom are: $n$ (energy), $\ell$ (angular momentum) and $m$ ($z$ projection of angular momentum). $\langle \cdot \rangle$ means average over \emph{energy} eigenstates.
+
+\subsection*{Scales, Constants and Special Values of Hydrogenoid Wave Functions $[1]$}
+
+Energies for the Coulomb Potential ($V(\textbf{r})=-\frac{1}{4 \pi \epsilon_0}\frac{Z e^2}{r})$ are $E_n=-\frac{\mu}{2n^2}\left( \frac{Ze^2}{4 \pi \epsilon_0 \hbar} \right)^2=-\frac{e^2}{4 \pi \epsilon_0 a_0} \frac{Z^2}{2 n^2}=-\frac{1}{2} \mu c^2 \frac{(Z \alpha)^2}{n ^2}$.\\
+
+\noindent Fine structure constant: $\alpha=\frac{e^2}{4 \pi \epsilon_0 \hbar c}$. Bohr radius: $a_0=4 \pi \epsilon_0 \hbar^2/(\mu e^2)$. \space \space \space
+$|\psi_{n \ell m}(0)|^2=\frac{Z^3}{\pi a_0^3 n^3} \delta_{\ell}^0 \delta_m^0$.
+
+\subsection*{Expected Values, the Virial Theorem and the Gamma Function $[2,3]$}
+
+Virial Theorem (valid for \emph{any} potential): If $H=T(\textbf{p})+V(\textbf{r})$ and $T(\textbf{p})=\frac{\textbf{p}^2}{2\mu}$ then $2\langle T \rangle=\langle \textbf{r} \cdot \nabla V \rangle$ .\\
+
+\noindent Expectation values for the Coulomb potential: $\left\langle \frac{1}{r} \right\rangle=\frac{Z}{a_0 n^2}$ , $\left\langle \frac{1}{r^2} \right\rangle=\frac{Z^2}{a_0^2 n^3 (\ell+1/2)}$ .\\
+
+\noindent Recursion Relation: $0=\frac{s}{4}\left[(2 \ell+1)^2-s^2 \right] \left( \frac{a_0}{Z} \right)^2 \langle r^{s-2} \rangle-(2s+1)\left(\frac{a_0}{Z} \right) \langle r^{s-1} \rangle+\frac{s+1}{n^2} \langle r^s \rangle$ .\\
+
+\noindent $\Gamma(z) = \int_0^\infty  t^{z-1} e^{-t}\,dt $ \space , \space $\Gamma(n+1)=n!$\space , \space $ \Gamma(1-z) \; \Gamma(z) = {\pi \over \sin{(\pi z)}} \,\! $ \space , \space  $\Gamma(z) \; \Gamma\left(z + \frac{1}{2}\right) = 2^{1-2z} \; \sqrt{\pi} \; \Gamma(2z). \,\! $
+
+
+\subsection*{Spherical Harmonics, Wigner 3$j$ Symbols and Clebsch -- Gordan Coefficients $[4]$}
+$\int_0^{2 \pi} d\phi \int_0^{\pi} \sin \theta d\theta \ \mathcal{Y}_{\ell_1}^{m_1}(\theta,\phi) \mathcal{Y}_{\ell_2}^{m_2}(\theta,\phi) \mathcal{Y}_{\ell_3}^{m_3}(\theta,\phi)=\sqrt{\frac{(2\ell_1+1)(2\ell_2+1)(2\ell_3+1)}{4 \pi}} \begin{pmatrix}
+  \ell_1 & \ell_2 & \ell_3\\
+  0 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+  \ell_1 & \ell_2 & \ell_3\\
+  m_1 & m_2 & m_3
+\end{pmatrix}
+$.
+\\
+
+\noindent Wigner 3$j$ --- Clebsch--Gordan (CG) relation:
+$
+\begin{pmatrix}
+  j_1 & j_2 & j_3\\
+  m_1 & m_2 & m_3
+\end{pmatrix}
+\equiv \frac{(-1)^{j_1-j_2-m_3}}{\sqrt{2j_3+1}} \langle j_1 m_1 j_2 m_2 | j_3 \, {-m_3} \rangle.$\\
+
+\noindent Selection rules for Wigner 3$j$ Symbol $\begin{pmatrix}  \ell_1 & \ell_2 & L\\   m_1 & m_2 & -M \end{pmatrix}$ (they are identical to CG Selection Rules):
+
+\noindent 
+\begin{tabular}{llll}
+$-\ell_i \leq m_i \leq \ell_i, $ & $m_1+m_2=M$, & $|\ell_1-\ell_2|\leqslant L \leqslant \ell_1+\ell_2$ & $\ell_1+\ell_2+L \in \mathbbm{Z}$.
+\end{tabular}
+\\
+
+\noindent Spherical components of a cartesian vector $\vec e=(e_x,e_y,e_z)$: $e_{\pm 1}=\mp \frac{1}{\sqrt{2}} \left( e_x\pm i e_y \right)$ and $e_0=e_z$.\\
+
+\noindent Ladder Operators: $ \hat \ell_{\pm}\equiv \hat \ell_x\pm i \hat \ell_y$. \space \space \space $\hat \ell_{\pm} |\ell,m \rangle=\hbar \sqrt{\ell(\ell+1)-m(m\pm1)}|\ell,m\pm1 \rangle$.
+
+\subsection*{References}
+$[1]$ P. Ewart, \textit{Atomic Physics Lecture notes} \url{https://users.physics.ox.ac.uk/~ewart/}\\
+$[2]$ S. Jeon, \textit{Lecture Notes for Quantum Physics II}. \url{http://www.physics.mcgill.ca/~jeon/Phys457/}\\
+$[3]$ E. W. Weisstein, ``Gamma Function.'' \url{http://mathworld.wolfram.com/GammaFunction.html}\\
+$[4]$ E. W. Weisstein, ``Wigner 3$j$-Symbol.'' \url{http://mathworld.wolfram.com/Wigner3j-Symbol.html}
+
+\begin{center}
+{\tiny This file can be found at \url{https://www.physics.utoronto.ca/~nquesada/misc/atomic.pdf} }
+\end{center}
+\end{document}
+

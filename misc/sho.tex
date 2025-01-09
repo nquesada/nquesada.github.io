@@ -1,0 +1,92 @@
+\documentclass[12pt]{shreyasnotes}
+
+\title{Transformaci\'on Can\'onica para el Oscilador Arm\'onico}
+\author{Nicol\'as Quesada}
+\date{}
+\begin{document}
+
+\maketitle
+
+Se tiene la transformaci\'on 
+\begin{subequations}
+\begin{align}
+a&=\frac{ m \omega q + i p }{
+   \sqrt{ 2 m \omega }} ,
+\label{eqn1}
+\\
+a^*&=\frac{ m \omega q - i p}{
+   \sqrt{ 2m \omega }} .
+\label{eqn2}
+\end{align}
+\end{subequations}
+Se pide mostrar que la transformaci\'on $(q,p)\longmapsto(a,ia^{*})$ es can\'onica y exhibir su funci\'on generatriz.\\
+
+Las ecuaciones (\ref{eqn1}) y (\ref{eqn2}) pueden ser invertidas para obtener:
+\begin{subequations}
+\begin{align}
+q&=\frac{ a +a^* }{\sqrt{2 m \omega}},\\
+p&=i  \sqrt{\frac{m \omega}{2}} \left(a^* -a \right).
+\end{align}
+\end{subequations}
+
+Se buscar\'a una funci\'on generatriz de primer tipo. Con ella se pueden escribir las ecuaciones auxiliares
+\begin{subequations}
+\begin{align}
+p&=\frac{\partial F_1}{\partial q}, \\
+i a^*&=-\frac{\partial F_1}{\partial a} .
+\end{align}
+\end{subequations}
+De la ecuaci\'on que define a $a$ se puede obtener a $p$ en terminos de $a$ y $q$ asi
+\begin{align}
+p=i \left(m q \omega - \sqrt{2 m \omega} a \right)
+\end{align}
+y sustituirlo en la primera ecuaci\'on auxiliar e integrar para obtener
+\begin{align}
+F_1=i \left(\frac{1}{2} m q^2 \omega - a  q \sqrt{2 m \omega }\right)+h(a).
+\end{align}
+La anterior ecuaci\'on se puede derivar parcialmente con respecto a $a$ y compararla con la segunda ecuaci\'on auxiliar (de la ecuaci\'on que define a $q$ en terminos de $a$ y $a^*$ podemos despejar esta \'ultima)
+\begin{align}
+\frac{\partial F_1}{\partial a}=h'(a)-i  q \sqrt{2 m \omega }=-i a^*=i \left(a - q \sqrt{2 m \omega }\right),
+\end{align}
+para obtener
+\begin{align}
+h'(a)= i a  \longrightarrow h(a)=\frac{1}{2} i a^2 .
+\end{align}
+Finalmente la funci\'on buscada es
+\begin{align}
+F_1=\frac{1}{2} i \left( a^2-2  a \sqrt{2 m \omega } q +m q^2 \omega \right).
+\end{align}
+Con lo anterior se ve que la transformaci\'on dada por (\ref{eqn1}) y (\ref{eqn2}) es can\'onica. Veamos como queda el hamiltoniano del oscilador arm\'onico en t\'erminos de las nuevas variables can\'onicas $(a,ia^*)$.\\
+El hamiltoniano del oscilador arm\'onico en las variables $(q,p)$ es
+\begin{align}
+H=\frac{p^2}{2m}+\frac{m \omega^2 q^2}{2}.
+\end{align}
+
+Por otro lado el Hamiltoniano  transformado es
+\begin{align}
+H'(a,a^*)=H(a,a^*)+\frac{\partial F}{\partial t}.
+\end{align}
+Adem\'as tenemos que
+\begin{align}
+a^* a=\frac{H}{\omega} \Longrightarrow H=\omega  a^* a \\
+\frac{\partial F}{\partial t}=0.
+\end{align}
+Finalmente 
+\begin{align}
+H'=\omega  a^* a.
+\end{align}
+Como $(a, ia^*)$ son variables can\'onicas se cumple que $\{a,i a^*\}=1$ y que su din\'amica est\'a dada por las ecuaciones de Hamilton. Con lo anterior es directo calcular las ecuaciones de movimento del sistema:
+\begin{subequations}
+\begin{align}
+ \frac{d}{dt} a&=\{a, \omega a^*a\} =\omega \left(\{a,a^*\}a+a^*\{a,a\} \right)=-i \omega a,\\
+ \frac{d}{dt} a^*&=\{a^*, \omega a^*a\}=\omega \left(\{a^*,a^*\}a+a^*\{a^*,a\} \right)=i \omega a^*,
+\end{align}
+\end{subequations}
+y su soluci\'on
+\begin{subequations}
+\begin{align}
+ a(t)&=a(0) e^{-i \omega t}\\
+a^*(t)&=a^*(0) e^{i \omega t}
+\end{align}
+\end{subequations}
+\end{document}

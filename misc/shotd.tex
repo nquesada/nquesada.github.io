@@ -1,0 +1,87 @@
+\documentclass[spanish,12pt]{shreyasnotes}
+
+\title{Transformaci\'on Can\'onica para el Oscilador Arm\'onico}
+\author{Nicol\'as Quesada}
+\date{}
+\begin{document}
+
+\maketitle
+
+Se tiene la transformaci\'on :
+\begin{eqnarray}
+a&=&\frac{e^{i  \omega t} (m \omega q + i p )}{
+   \sqrt{ 2 m \omega }} 
+\label{eqn1}
+\\
+a^*&=&\frac{e^{-i  \omega t} (m \omega q - i p)}{
+   \sqrt{ 2m \omega }} 
+\label{eqn2}
+\end{eqnarray}
+Se pide mostrar que la transformaci\'on $(q,p)\longmapsto(a,ia^{*})$ es can\'onica y exhibir su funci\'on generatriz.\\
+
+Las ecuaciones (\ref{eqn1}) y (\ref{eqn2}) pueden ser invertidas para obtener:
+\begin{eqnarray}
+q&=&\frac{ a e^{-i \omega t }+a^* e^{i \omega t}}{\sqrt{2 m \omega}}\\
+p&=&i  \sqrt{\frac{m \omega}{2}} \left(a^* e^{i \omega t}-a e^{-i \omega t}\right)
+\end{eqnarray}
+
+Se buscar\'a una funci\'on generatriz de primer tipo. Con ella se pueden escribir las ecuaciones auxiliares:
+\begin{eqnarray}
+p&=&\frac{\partial F_1}{\partial q} \\
+i a^*&=&-\frac{\partial F_1}{\partial a} 
+\end{eqnarray}
+De la ecuaci\'on que define a $a$ se puede obtener a $p$ en terminos de $a$ y $q$ asi:
+\begin{eqnarray}
+p=i \left(m q \omega - e^{-i \omega t} \sqrt{2 m \omega} a \right)
+\end{eqnarray}
+y sustituirlo en la primera ecuaci\'on auxiliar e integrar para obtener:
+\begin{eqnarray}
+F_1=i \left(\frac{1}{2} m q^2 \omega - a e^{-i 
+   \omega t} q \sqrt{2 m \omega }\right)+h(a)
+\end{eqnarray}
+La anterior ecuaci\'on se puede derivar parcialmente con respecto a $a$ y compararla con la segunda ecuaci\'on auxiliar (De la ecuaci\'on que define a $q$ en terminos de $a$ y $a^*$ podemos despejar esta \'ultima):
+\begin{equation}
+\frac{\partial F_1}{\partial a}=h'(a)-i  e^{-i  \omega t} q \sqrt{2 m \omega }=-i a^*=i \left(a e^{-2 i  \omega t}- e^{-i  \omega t } q \sqrt{2 m \omega }\right)
+\end{equation}
+
+
+Para obtener:
+\begin{equation}
+h'(a)= i a e^{-2 i \omega  t} \longrightarrow h(a)=\frac{1}{2} i a^2 e^{-2 i \omega t }
+\end{equation}
+Finalmente la funci\'on buscada es:
+
+\begin{eqnarray}
+F_1=\frac{1}{2} i \left(e^{-2 i t \omega } a^2-2 e^{-i t \omega } a \sqrt{2 m \omega } q +m q^2 \omega \right)
+\end{eqnarray}
+Con los anterior se ve que la transformaci\'on dada por (\ref{eqn1}) y (\ref{eqn2}) es can\'onica. Veamos como queda el hamiltoniano del oscilador arm\'onico en t\'erminos de las nuevas variables can\'onicas $(a,ia^*)$.\\
+El hamiltoniano del oscilador arm\'onico en las variables $(q,p)$ es:
+\begin{equation}
+H=\frac{p^2}{2m}+\frac{m \omega^2 q^2}{2}
+\end{equation}
+
+Por otro lado el Hamiltoniano  transformado es:
+\begin{equation}
+H'(a,a^*)=H(a,a^*)+\frac{\partial F}{\partial t}
+\end{equation}
+Adem\'as tenemos que:
+\begin{eqnarray}
+a^* a=\frac{H}{\omega} \Longrightarrow H=\omega  a^* a \\
+\frac{\partial F}{\partial t}=\omega \left( a^2 e^{-2 i \omega t}  - a e^{-i  \omega  t  } q   \sqrt{2 m \omega } \right)
+\end{eqnarray}
+que al cambiar a $q$ en t\'erminos de $a$ y $a^*$ se simplifica enormemente para dar:
+\begin{equation}
+\frac{\partial F}{\partial t}=- \omega a^* a 
+\end{equation}
+Finalmente $H'=0$. \\
+\\
+Estas transformaciones han hecho que las nuevas coordenadas y momentos sean constantes y que adem\'as estos tengan por valor la exponencial de una fase debida a las condiciones iniciales por una funci\'on de la energ\'ia. Mas exactamente:
+\begin{eqnarray}
+ q=A \cos (\omega t-\phi )\Longrightarrow   p=-A m \omega  \sin (\omega t-\phi)
+\end{eqnarray}
+ entonces 
+\begin{eqnarray}
+a&=&\frac{A e^{i \phi } \sqrt{m \omega }}{\sqrt{2}}=\frac{e^{i \phi } \sqrt{E}}{\sqrt{ \omega}}\\
+a^*&=&\frac{A e^{-i \phi } \sqrt{m \omega }}{\sqrt{2}}=\frac{ e^{-i \phi } \sqrt{E}}{\sqrt{ \omega} }
+\end{eqnarray}
+\end{document}
