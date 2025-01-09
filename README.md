@@ -9,5 +9,5 @@ I completed [my PhD](https://academictree.org/physics/tree.php?pid=164839) thesi
 
 I keep a collection of [miscellaneous useful links](./misc/).
 
-|Find me in | 📍 PJAB 4005                                    | [Google Scholar](https://scholar.google.ca/citations?user=dZNVjOEAAAAJ&hl=en&oi=ao) | [GitHub](https://github.com/nquesada)             | \
+|Find me in | 📍 PJAB 4005                                    | [Google Scholar](https://scholar.google.ca/citations?user=dZNVjOEAAAAJ&hl=en&oi=ao) | [GitHub](https://github.com/nquesada)             | 
 |           | [ORCID](https://orcid.org/0000-0002-0175-1688) | [arXiv](https://arxiv.org/search/?searchtype=author&query=Quesada%2C+N)             | [Mastodon](https://fediscience.org/@polyquantique)|
