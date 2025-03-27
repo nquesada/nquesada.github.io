@@ -10,7 +10,7 @@ I am also a Senior Member of [Optica](https://www.optica.org/membership/distingu
 Here is a collection of [miscellaneous links](./misc/).
 
 📧: first.last@polymtl.ca \
-🌐: [www.physics.utoronto.ca/~nquesada](https://www.physics.utoronto.ca/~nquesada) \
+🌐: [www.physics.utoronto.ca/~nquesada](https://www.physics.utoronto.ca/~nquesada) 
 
 | 📍 PJAB 4005                                                                       | [ORCID](https://orcid.org/0000-0002-0175-1688) | [GitHub](https://github.com/nquesada)             | 
 |[Google Scholar](https://scholar.google.ca/citations?user=dZNVjOEAAAAJ&hl=en&oi=ao) | [arXiv](https://arxiv.org/search/?searchtype=author&query=Quesada%2C+N)   | [Mastodon](https://fediscience.org/@polyquantique)| 
