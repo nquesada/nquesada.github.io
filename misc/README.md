@@ -3,7 +3,7 @@
 * [Solutions](https://github.com/nquesada/Goldstein) to some of H. Goldstein's Classical Mechanics book problems.
 * Some useful equations in [Atomic Physics](https://nquesada.github.io/misc/atomic.pdf).
 * A conversion chart for [squeezing in different units](https://nquesada.github.io/misc/squeezing.pdf).
-* [&nabla; in cylindrical and spherical coordinates](https://nquesada.github.io/misc/DelFixed.pdf).
+* [&nabla; in cylindrical and spherical coordinates](https://nquesada.github.io/misc/DelFixed.pdf) originally from [wikipedia in html](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates).
 * The classical version of [a and a<sup>&#8224;</sup>](https://nquesada.github.io/misc/sho.pdf).
 * The normal ordered form of [(a+a<sup>&#8224;</sup>)<sup>n</sup>](https://nquesada.github.io/misc/normal.pdf).
 * [An identity](https://nquesada.github.io/misc/erfi.pdf) involving the imaginary error function erfi(x) (with Aaron Goldberg).
