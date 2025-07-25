@@ -5,7 +5,7 @@ I am affiliated with two of [FRQNT](https://frq.gouv.qc.ca/en/)'s Regroupements 
 
 I am also a Senior Member of [Optica](https://www.optica.org/membership/distinguished_honorary/senior/senior_member_classes/2021_osa_senior_members_(1)/), a supporter of [The Cost of Knowledge](http://thecostofknowledge.com/) and a former editor of [Quantum](https://quantum-journal.org/).
 
-[My PhD](https://academictree.org/physics/tree.php?pid=164839) thesis on [Very Nonlinear Quantum Optics](https://tspace.library.utoronto.ca/handle/1807/71623) was completed under the tutelage of [D.F.V. James](https://www.physics.utoronto.ca/~dfvj/) and [J.E. Sipe](https://www.physics.utoronto.ca/~sipegroup/) at the University of Toronto.
+[My PhD](https://academictree.org/physics/tree.php?pid=164839) thesis on [Very Nonlinear Quantum Optics](https://tspace.library.utoronto.ca/handle/1807/71623) was completed at the University of Toronto.
 
 Here is a collection of [miscellaneous links](./misc/).
 
