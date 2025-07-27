@@ -1,13 +1,12 @@
 
-I am an [associate professor](https://www.polymtl.ca/expertises/quesada-nicolas) at the Department of Physics of the [École polytechnique de Montréal](https://www.polymtl.ca/) where I lead the [Polyquantique Research Group](https://qpi.polymtl.ca). 
+[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Department of Physics at the [École polytechnique de Montréal](https://www.polymtl.ca/).
 
-I am affiliated with two of [FRQNT](https://frq.gouv.qc.ca/en/)'s Regroupements stratégiques: [INTRIQ](https://www.intriq.org) and [COPL](https://coplweb.ca/). 
+Senior Member of [Optica](https://www.optica.org/membership/distinguished_honorary/senior/senior_member_classes/2021_osa_senior_members_(1)/),  supporter of [The Cost of Knowledge](http://thecostofknowledge.com/) and former editor of [Quantum](https://quantum-journal.org)
 
-I am also a Senior Member of [Optica](https://www.optica.org/membership/distinguished_honorary/senior/senior_member_classes/2021_osa_senior_members_(1)/), a supporter of [The Cost of Knowledge](http://thecostofknowledge.com/) and a former editor of [Quantum](https://quantum-journal.org/).
+I lead the [Polyquantique Research Group](https://qpi.polymtl.ca), which is affiliated with two of [FRQNT](https://frq.gouv.qc.ca/en/)'s Regroupements stratégiques: [INTRIQ](https://www.intriq.org) and [COPL](https://coplweb.ca/). 
 
-[My PhD](https://academictree.org/physics/tree.php?pid=164839) thesis on [Very Nonlinear Quantum Optics](https://tspace.library.utoronto.ca/handle/1807/71623) was completed at the University of Toronto.
+I completed [My PhD](https://academictree.org/physics/tree.php?pid=164839) thesis on [Very Nonlinear Quantum Optics](https://tspace.library.utoronto.ca/handle/1807/71623) at the University of Toronto.
 
-Here is a collection of [miscellaneous links](./misc/).
 
 📧: first.last@polymtl.ca \
 🌐: [www.physics.utoronto.ca/~nquesada](https://www.physics.utoronto.ca/~nquesada) 
