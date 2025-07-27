@@ -1,5 +1,5 @@
 
-[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Department of Physics at the [École polytechnique de Montréal](https://www.polymtl.ca/).
+[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Department of Physics, [École polytechnique de Montréal](https://www.polymtl.ca/).
 
 Senior Member of [Optica](https://www.optica.org/membership/distinguished_honorary/senior/senior_member_classes/2021_osa_senior_members_(1)/),  supporter of [The Cost of Knowledge](http://thecostofknowledge.com/) and former editor of [Quantum](https://quantum-journal.org)
 
