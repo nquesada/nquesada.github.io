@@ -1,7 +1,7 @@
 
 [Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Department of Physics, [École polytechnique de Montréal](https://www.polymtl.ca/).
 
-Senior Member of [Optica](https://www.optica.org/membership/distinguished_honorary/senior/senior_member_classes/2021_osa_senior_members_(1)/),  supporter of [The Cost of Knowledge](http://thecostofknowledge.com/) and former editor of [Quantum](https://quantum-journal.org)
+Senior Member of [Optica](https://www.optica.org/membership/distinguished_honorary/senior/senior_member_classes/2021_osa_senior_members_(1)/),  supporter of [The Cost of Knowledge](http://thecostofknowledge.com/) and former editor of [Quantum](https://quantum-journal.org).
 
 I lead the [Polyquantique Research Group](https://qpi.polymtl.ca), which is affiliated with two of [FRQNT](https://frq.gouv.qc.ca/en/)'s Regroupements stratégiques: [INTRIQ](https://www.intriq.org) and [COPL](https://coplweb.ca/). 
 
