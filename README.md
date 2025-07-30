@@ -5,7 +5,7 @@ Senior Member of [Optica](https://www.optica.org/membership/distinguished_honora
 
 I lead the [Polyquantique Research Group](https://qpi.polymtl.ca), which is affiliated with two of [FRQNT](https://frq.gouv.qc.ca/en/)'s Regroupements stratégiques: [INTRIQ](https://www.intriq.org) and [COPL](https://coplweb.ca/). 
 
-I completed [My PhD](https://academictree.org/physics/tree.php?pid=164839) thesis on [Very Nonlinear Quantum Optics](https://tspace.library.utoronto.ca/handle/1807/71623) at the University of Toronto.
+[My PhD](https://academictree.org/physics/tree.php?pid=164839) thesis on [Very Nonlinear Quantum Optics](https://tspace.library.utoronto.ca/handle/1807/71623) was completed at the University of Toronto.
 
 
 📧: first.last@polymtl.ca \
