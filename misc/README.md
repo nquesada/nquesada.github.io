@@ -23,7 +23,7 @@ np.set_printoptions(linewidth=200)
 #rcParams['font.sans-serif'] = ['Computer Modern Roman']
 ```
 
-```Mathematica
+```
 GaussianIntegrator[{coeff_, exp_}, var_] := 
  Module[{a, b, c, aa, bb, cc},
   {c, b, a} = Series[exp + aa var^2 + var bb + cc, {var, 0, 2}][[3]];
