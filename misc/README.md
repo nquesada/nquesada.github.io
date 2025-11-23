@@ -1,6 +1,6 @@
 # mis·cel·la·ne·a
 
-* [Solutions](https://github.com/nquesada/Goldstein) to some of H. Goldstein's Classical Mechanics book problems.
+* [Solutions](https://github.com/nquesada/Goldstein) to some of H. Goldstein's Classical Mechanics book problems. The compiled pdf can be found [here](https://nquesada.github.io/misc/solutions.pdf).
 * Some useful equations in [Atomic Physics](https://nquesada.github.io/misc/atomic.pdf).
 * A conversion chart for [squeezing in different units](https://nquesada.github.io/misc/squeezing.pdf).
 * [&nabla; in cylindrical and spherical coordinates](https://nquesada.github.io/misc/DelFixed.pdf) originally from [wikipedia in html](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates).
