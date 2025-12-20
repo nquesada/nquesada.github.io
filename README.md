@@ -1,7 +1,7 @@
 
 [Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Department of Physics, [École polytechnique de Montréal](https://www.polymtl.ca).
 
-I am signatory of [The Cost of Knowledge](http://thecostofknowledge.com/) and former editor of [Quantum](https://quantum-journal.org).
+I am a signatory of [The Cost of Knowledge](http://thecostofknowledge.com/) and a former editor of [Quantum](https://quantum-journal.org).
 
 I lead the [Polyquantique Research Group](https://qpi.polymtl.ca), which is affiliated with two of [FRQ](https://frq.gouv.qc.ca/en/)'s strategic clusters: [INTRIQ](https://www.intriq.org) and [COPL](https://coplweb.ca/).  
 I also moonlight as a technical consultant for organizations developing/investing on quantum technologies.
