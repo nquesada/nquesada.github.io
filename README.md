@@ -1,5 +1,5 @@
 
-[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Department of Physics, [École polytechnique de Montréal](https://www.polymtl.ca).
+[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Quantum Optics and Quantum Information, [École polytechnique de Montréal](https://www.polymtl.ca).
 
 I am a signatory of [The Cost of Knowledge](http://thecostofknowledge.com/) and a former editor of [Quantum](https://quantum-journal.org).
 
@@ -13,6 +13,6 @@ N'hésitez pas à me contacter en français si vous préférez.
 📧: first.last@polymtl.ca \
 🌐: [www.physics.utoronto.ca/~nquesada](https://www.physics.utoronto.ca/~nquesada) 
 
-| 📍 [PJAB](https://maps.app.goo.gl/66X939os1pnnHift8) 4005                                                                       | [ORCID](https://orcid.org/0000-0002-0175-1688) | [GitHub](https://github.com/nquesada)             | 
-|[Google Scholar](https://scholar.google.ca/citations?user=dZNVjOEAAAAJ&hl=en&oi=ao) | [arXiv](https://arxiv.org/search/?searchtype=author&query=Quesada%2C+N)   | [Mastodon](https://fediscience.org/@polyquantique)| 
+| 📍 [PJAB](https://maps.app.goo.gl/66X939os1pnnHift8) 4005                                                                       | [ORCID](https://orcid.org/0000-0002-0175-1688) | [Git](https://github.com/nquesada)             | 
+|[Scholar](https://scholar.google.ca/citations?user=dZNVjOEAAAAJ&hl=en&oi=ao) | [arXiv](https://arxiv.org/search/?searchtype=author&query=Quesada%2C+N)   | [Mastodon](https://fediscience.org/@polyquantique)| 
 
