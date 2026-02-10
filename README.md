@@ -1,5 +1,5 @@
 
-[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), Physics, [École polytechnique de Montréal](https://www.polymtl.ca).
+[Associate professor](https://www.polymtl.ca/expertises/quesada-nicolas), engineering physics, [École polytechnique de Montréal](https://www.polymtl.ca).
 
 I am a signatory of [The Cost of Knowledge](http://thecostofknowledge.com/) and a former editor of [Quantum](https://quantum-journal.org).
 
