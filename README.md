@@ -13,6 +13,6 @@ N'hésitez pas à me contacter en français si vous préférez.
 📧: first.last@polymtl.ca \
 🌐: [www.physics.utoronto.ca/~nquesada](https://www.physics.utoronto.ca/~nquesada) 
 
-|[PJAB](https://maps.app.goo.gl/66X939os1pnnHift8) 4005                                                                       | [ORCID](https://orcid.org/0000-0002-0175-1688) | [Code](https://github.com/nquesada)             | 
-|[Mastodon](https://fediscience.org/@polyquantique) | [arXiv](https://arxiv.org/search/?searchtype=author&query=Quesada%2C+N)   |[INSPIRE](https://inspirehep.net/authors/1980587) | 
+|[PJAB](https://maps.app.goo.gl/66X939os1pnnHift8) 4005                                                                       | [ORCID](https://orcid.org/0000-0002-0175-1688) | [INSPIRE](https://inspirehep.net/authors/1980587)              | 
+|[Mastodon](https://fediscience.org/@polyquantique) | [arXiv](https://arxiv.org/search/?searchtype=author&query=Quesada%2C+N)   |[Code](https://github.com/nquesada) | 
 
